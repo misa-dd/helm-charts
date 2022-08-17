@@ -69,7 +69,7 @@ spec:
 {{ toYaml .Values.envFrom | indent 10 }}
       {{- end }}
         imagePullPolicy: "{{ .Values.imagePullPolicy }}"
-        name: {{ .Values.api.name }}
+        name: api
         ports:
         - containerPort: {{ .Values.api.deployment.port }}
           protocol: TCP
